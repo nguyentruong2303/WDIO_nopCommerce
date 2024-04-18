@@ -47,7 +47,7 @@ export default class Register {
         await expect(expectedFirstNameErrorMSG).toEqual(actualFirstNameErrorMSG);
 
         let expectedLastNameErrorMSG = 'Last name is required.';
-        let actualLastNameErrorMSG = await RegisterPage.getFirstNameError();
+        let actualLastNameErrorMSG = await RegisterPage.getLastNameError();
 
         await expect(expectedLastNameErrorMSG).toEqual(actualLastNameErrorMSG);
 
@@ -88,7 +88,7 @@ export default class Register {
         let expectedInvalidPassword = 'must have at least 6 characters';
         let actualInvalidPassword = await RegisterPage.getPasswordError();
 
-        await expect(actualInvalidPassword).to.include(expectedInvalidPassword);
+        await expect(actualInvalidPassword).toContain(expectedInvalidPassword);
         return this;
     }
 

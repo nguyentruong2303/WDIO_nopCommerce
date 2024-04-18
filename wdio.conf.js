@@ -128,7 +128,7 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        require: ['@babel/register'],
+       // require: ['@babel/register'],
         ui: 'bdd',
         timeout: 60000
     },
@@ -185,8 +185,9 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        browser.maximizeWindow()
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
