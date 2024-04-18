@@ -1,14 +1,32 @@
 {
-  "name": "WDIO_nopCommerce",
-  "type": "module",
+  "name": "wdio_nopcommerce",
+  "type": "commonjs",
   "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/register": "^7.23.7",
     "@wdio/allure-reporter": "^8.36.0",
     "@wdio/cli": "^8.36.0",
     "@wdio/local-runner": "^8.36.0",
     "@wdio/mocha-framework": "^8.36.0",
-    "@wdio/spec-reporter": "^8.36.0"
+    "@wdio/spec-reporter": "^8.36.0",
+    "mocha": "^10.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "scripts": {
+    "build": "babel src -d dist",
     "wdio": "wdio run ./wdio.conf.js"
-  }
+  },
+  "dependencies": {
+    "chai": "^5.1.0"
+  },
+  "version": "1.0.0",
+  "main": "wdio.conf.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

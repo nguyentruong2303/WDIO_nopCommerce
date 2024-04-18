@@ -1,4 +1,4 @@
-export const config = {
+exports.config = {
     //
     // ====================
     // Runner Configuration
@@ -21,7 +21,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        './src/test_specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -84,7 +84,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    // baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://demo.nopcommerce.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -128,6 +128,7 @@ export const config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
+        require: ['@babel/register'],
         ui: 'bdd',
         timeout: 60000
     },
