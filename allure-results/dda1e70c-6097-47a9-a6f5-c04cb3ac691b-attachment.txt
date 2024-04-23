@@ -1,3 +1,0 @@
-{
-  "text": "automation123@gmail.com"
-}
