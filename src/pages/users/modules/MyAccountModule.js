@@ -1,11 +1,11 @@
 const CUSTOMER_INFO_LINK = '.customer-info';
-const CUSTOMER_ADDRESS_LINK = '.customer-addresses';
-const CUSTOMER_ORDERS_LINK = '.customer-orders';
-const DOWNLOADABLE_PRODUCTS_LINK = '.downloadable-products';
-const BACK_IN_STOCK_SUB_LINK = '.back-in-stock-subscriptions';
-const REWARD_POINTS_LINK = '.reward-points';
-const CHANGE_PASSWORD_LINK = '.change-password';
-const CUSTOMER_REVIEWS_LINK = '.customer-reviews';
+const CUSTOMER_ADDRESS_LINK = '.customer-addresses a';
+const CUSTOMER_ORDERS_LINK = '.customer-orders a';
+const DOWNLOADABLE_PRODUCTS_LINK = '.downloadable-products a';
+const BACK_IN_STOCK_SUB_LINK = '.back-in-stock-subscriptions a';
+const REWARD_POINTS_LINK = '.reward-points a';
+const CHANGE_PASSWORD_LINK = '.change-password a';
+const CUSTOMER_REVIEWS_LINK = '.customer-reviews a';
 
 class MyAccountModule {
     async openCustomerInfoPage() {
