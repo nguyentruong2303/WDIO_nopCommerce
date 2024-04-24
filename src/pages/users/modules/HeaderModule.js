@@ -6,6 +6,7 @@ const HEADER_LOGO_LINK = "div.header-logo a";
 const HEADER_SEARCH_TXB = ".search-box input";
 const HEADER_SEARCH_BTN = ".search-box button";
 const MY_ACCOUNT_LINK = '.ico-account';
+const HEADER_LOGOUT_LINK = '.ico-logout';
 
 class HeaderModule {
     async registerUser() {
@@ -49,6 +50,11 @@ class HeaderModule {
         
         return this;
     };
+
+    async clickLogout() {
+        await $(HEADER_LOGOUT_LINK).click();
+        return this;
+    }
 }
 
 module.exports = new HeaderModule();

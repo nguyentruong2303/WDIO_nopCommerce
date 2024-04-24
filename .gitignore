@@ -3,4 +3,6 @@ node_modules/
 /results/
 results/
 /allure-report/
+/allure-report
+allure-report/
 /package-lock.json
