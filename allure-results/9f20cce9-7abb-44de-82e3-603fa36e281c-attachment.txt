@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[text()='Add your review']\"}\n  (Session info: chrome=124.0.6367.60)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF66BC61542+60802]\n\t(No symbol) [0x00007FF66BBDAC42]\n\t(No symbol) [0x00007FF66BA97CE4]\n\t(No symbol) [0x00007FF66BAE6D4D]\n\t(No symbol) [0x00007FF66BAE6E1C]\n\t(No symbol) [0x00007FF66BB2CE37]\n\t(No symbol) [0x00007FF66BB0ABBF]\n\t(No symbol) [0x00007FF66BB2A224]\n\t(No symbol) [0x00007FF66BB0A923]\n\t(No symbol) [0x00007FF66BAD8FEC]\n\t(No symbol) [0x00007FF66BAD9C21]\n\tGetHandleVerifier [0x00007FF66BF6415D+3217821]\n\tGetHandleVerifier [0x00007FF66BFA60F7+3488055]\n\tGetHandleVerifier [0x00007FF66BF9F07F+3459263]\n\tGetHandleVerifier [0x00007FF66BD1B886+823494]\n\t(No symbol) [0x00007FF66BBE5FDF]\n\t(No symbol) [0x00007FF66BBE0F04]\n\t(No symbol) [0x00007FF66BBE1092]\n\t(No symbol) [0x00007FF66BBD18E4]\n\tBaseThreadInitThunk [0x00007FFDDCF0257D+29]\n\tRtlUserThreadStart [0x00007FFDDD84AA48+40]\n"
+}
