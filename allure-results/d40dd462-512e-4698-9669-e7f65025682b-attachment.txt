@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//a[text()='Lenovo Thinkpad X1 Carbon Laptop']"
+}
