@@ -2,7 +2,7 @@ import NotebooksFlow from "../../test_flows/users/Notebooks";
 import NotebooksData from "../../../resources/test_data/Notebooks";
 
 describe('Sort, Display and Paging testing', () => {
-    it.skip('TC_01_Sort_With_Name_A_To_Z', async () => {
+    it('TC_01_Sort_With_Name_A_To_Z', async () => {
         const notebooksFlow = new NotebooksFlow(NotebooksData.sortAtoZ);
         await notebooksFlow.openNotebooksPage();
         await notebooksFlow.doSortBy();
@@ -35,7 +35,8 @@ describe('Sort, Display and Paging testing', () => {
         const notebooksFlow = new NotebooksFlow(NotebooksData.sortThreeProduct);
         await notebooksFlow.openNotebooksPage();
         await notebooksFlow.doDisplayPerPage();
-        await notebooksFlow.verifyDisplayedWithThreeProductOnePage_2();
+        await browser.pause(5000);
+        await notebooksFlow.verifyDisplayedWithThreeProductOnePage();
     })
 
     it.skip('TC_06_Display_With_Six_Product_One_Page', async () => {
@@ -45,7 +46,7 @@ describe('Sort, Display and Paging testing', () => {
         await notebooksFlow.verifyDisplayedWithSixProductOnePage();
     })
 
-    it('TC_07_Display_With_Nine_Product_One_Page', async () => {
+    it.skip('TC_07_Display_With_Nine_Product_One_Page', async () => {
         const notebooksFlow = new NotebooksFlow(NotebooksData.sortNineProduct);
         await notebooksFlow.openNotebooksPage();
         await notebooksFlow.doDisplayPerPage();

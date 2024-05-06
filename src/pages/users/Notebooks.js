@@ -6,6 +6,7 @@ const INDIVIDUAL_PAGE_BTN = '.individual-page';
 const NEXT_PAGE_BTN = '.next-page';
 const PREVIOUS_PAGE_BTN = '.previous-page';
 const ACTUAL_PRICE_TXT = '.actual-price';
+const AJAX_PRODUCTS_LOADING = ".ajax-products-busy";
 
 
 class Notebooks {
@@ -25,6 +26,12 @@ class Notebooks {
         return this;
     }
 
+    async isNotDisplayedAjaxProductLoading() {
+        await $(AJAX_PRODUCTS_LOADING).waitForDisplayed({ reverse: true });
+        await browser.pause(2000);
+        return this;
+    }
+
     async getProductTitleBeforeSort() {
         const PRODUCT_TITLE_SLT =  await $$(PRODUCT_TITLE_TXT);
         const PRODUCT_TITLE_DEFAULT = await PRODUCT_TITLE_SLT.map(pTitle =>  pTitle.getText());
@@ -37,7 +44,7 @@ class Notebooks {
         const PRODUCT_TITLE_DEFAULT = await PRODUCT_TITLE_SLT.map(pTitle =>  pTitle.getText());
 
 
-        return PRODUCT_TITLE_DEFAULT.sort();
+        return PRODUCT_TITLE_DEFAULT;
     }
 
     async getProductTitleAfterSortZtoA() {
@@ -46,19 +53,17 @@ class Notebooks {
         const PRODUCT_TITLE_DEFAULT = await PRODUCT_TITLE_SLT.map(pTitle =>  pTitle.getText());
 
 
-        return PRODUCT_TITLE_DEFAULT.reverse();
+        return PRODUCT_TITLE_DEFAULT;
     }
 
     async getQualityProduct() {
+        await this.isDisplayedNextIcon();
         const PRODUCT_TITLE_SLT =  await $$(PRODUCT_TITLE_TXT);
         const PRODUCT_TITLE_DEFAULT = await PRODUCT_TITLE_SLT.map(pTitle =>  pTitle.getText());
-        const qualityProduct = PRODUCT_TITLE_DEFAULT.length;
-        return qualityProduct;
+        console.log(PRODUCT_TITLE_DEFAULT);
+        return PRODUCT_TITLE_DEFAULT;
     }
 
-    async getQualityProduct_2() {
-        return await $$(PRODUCT_TITLE_TXT);
-    }
 
     async getActualPrice() {
         const ACTUAL_PRICE_SLT = await $$(ACTUAL_PRICE_TXT);
@@ -69,13 +74,13 @@ class Notebooks {
     async getActualPriceAfterSortLowHigh() {
         const ACTUAL_PRICE_SLT = await $$(ACTUAL_PRICE_TXT);
         const ACTUAL_PRICE_DEFAULT = await ACTUAL_PRICE_SLT.map(price =>  price.getText());
-        return ACTUAL_PRICE_DEFAULT.sort();
+        return ACTUAL_PRICE_DEFAULT;
     }
 
     async getActualPriceAfterSortHighLow() {
         const ACTUAL_PRICE_SLT = await $$(ACTUAL_PRICE_TXT);
         const ACTUAL_PRICE_DEFAULT = await ACTUAL_PRICE_SLT.map(price =>  price.getText());
-        return ACTUAL_PRICE_DEFAULT.reverse();
+        return ACTUAL_PRICE_DEFAULT;
     }
 
     async getCurrentPage() {
